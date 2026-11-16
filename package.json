@@ -1,0 +1,16 @@
+{
+  "name": "pobb-enhancer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Click items and gems on pobb.in to open a prefilled pathofexile.com/trade search.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "build": "node scripts/build.mjs",
+    "update-data": "node scripts/update-data.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

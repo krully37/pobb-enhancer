@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pobb Enhancer options</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 14px/1.5 system-ui, sans-serif; margin: 16px; min-width: 320px; max-width: 520px; }
+    label { display: block; font-weight: 600; margin-top: 14px; }
+    .hint { font-weight: 400; opacity: 0.75; font-size: 12px; }
+    select, input { margin-top: 4px; font: inherit; padding: 4px 6px; }
+    input[type=number] { width: 6em; }
+    #status { margin-top: 14px; min-height: 1.5em; font-size: 12px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <label for="league">League
+    <div class="hint">Auto picks the current softcore trade league.</div>
+  </label>
+  <select id="league"><option value="">Auto</option></select>
+
+  <label for="status">Listings</label>
+  <select id="status">
+    <option value="available">Instant Buyout and In Person (Online)</option>
+    <option value="securable">Instant Buyout</option>
+    <option value="online">In Person (Online)</option>
+    <option value="any">Any</option>
+  </select>
+
+  <label for="rollPercent">Minimum roll (% of the build's roll)
+    <div class="hint">90 means +100 Life is searched as at least +90.</div>
+  </label>
+  <input id="rollPercent" type="number" min="0" max="100" step="1">
+
+  <label for="countOffset">Mods allowed to be missing
+    <div class="hint">0 requires every mod (count group min = N). Lower it on the trade page, or here.</div>
+  </label>
+  <input id="countOffset" type="number" min="0" max="10" step="1">
+
+  <div id="status"></div>
+  <script src="options.js" type="module"></script>
+</body>
+</html>

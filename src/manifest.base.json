@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Pobb Enhancer",
+  "description": "Click items and gems on pobb.in builds to open a prefilled Path of Exile trade search.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.pathofexile.com/api/trade/data/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://pobb.in/*"],
+      "js": ["content-lib.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}

@@ -1,0 +1,50 @@
+.pobb-enhancer-active .inventory img.item,
+.pobb-enhancer-active [data-gem-id] {
+  cursor: pointer;
+}
+
+.pobb-enhancer-badge {
+  display: none;
+  position: fixed;
+  z-index: 2147483646;
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #c8a26b;
+  color: #1a1410;
+  font: bold 11px/14px system-ui, sans-serif;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.pobb-enhancer-toast {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 10px 14px;
+  border-radius: 8px;
+  border-left: 4px solid #c8a26b;
+  background: #1e1b18;
+  color: #e8e2d8;
+  font: 13px/1.4 system-ui, sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.pobb-enhancer-toast.pobb-enhancer-error {
+  border-left-color: #d9534f;
+}
+
+.pobb-enhancer-toast-title {
+  font-weight: 600;
+}
+
+.pobb-enhancer-toast-line {
+  margin-top: 2px;
+  color: #b9b0a3;
+  overflow-wrap: anywhere;
+}
